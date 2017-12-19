@@ -35,9 +35,9 @@ def home(request):
 		try:
 			submission = UserSubmissions.objects.get(profile = user)    
 		except UserSubmissions.DoesNotExist:
+			#TODO
 			return render(request, 'participants/challenge.html')
 
-		#TODO
 		if submission.status == 0:
 			return render(request, 'participants/submission_in_review.html')
 
