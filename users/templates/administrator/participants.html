@@ -1,0 +1,13 @@
+<h2> Admin Page </h2>
+
+{% if participants %}
+	<ul>
+		{% for participant in participants %}
+		    <li> {{participant.user.username}} </li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No Submissions for review.</p>
+
+{% endif %}
+

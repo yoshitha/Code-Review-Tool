@@ -1,0 +1,10 @@
+<h2> Submission List </h2>
+
+{% if submissions %}
+        <ul>
+        {% for submission in submissions %}
+            <li><a href="{{ submission.docfile.url }}">{{ submission.docfile.url }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Submissions for review.</p>
